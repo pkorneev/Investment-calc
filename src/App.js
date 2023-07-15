@@ -53,6 +53,7 @@ function App() {
     };
     calculateHandler(obj);
   };
+
   const onClickResetHandler = (event) => {
     setdataForOutput("");
   };
@@ -64,7 +65,9 @@ function App() {
         onReset={onClickResetHandler}
       />
       {!dataForOutput && (
-        <p className="fallback">No investment calculated yet.</p>
+        <p className="fallback">
+          No investment calculated yet, please fill out the form.
+        </p>
       )}
       {dataForOutput && <Output data={dataForOutput} />}
     </div>

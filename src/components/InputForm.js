@@ -8,12 +8,14 @@ const InputForm = (props) => {
 
   const formSubmitHandler = (event) => {
     event.preventDefault();
-    props.onAddInvestment(
-      currentSavings,
-      yearlySavings,
-      expecredInterest,
-      duration
-    );
+    if (currentSavings && yearlySavings && expecredInterest && duration) {
+      props.onAddInvestment(
+        currentSavings,
+        yearlySavings,
+        expecredInterest,
+        duration
+      );
+    }
   };
   const currentSavingsChangeHandler = (event) => {
     setCurrentSavings(event.target.value);
