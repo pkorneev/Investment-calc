@@ -119,3 +119,9 @@ button:hover {
 .fallback{
   text-align: center;
 }
+.input-group label{
+  font-size: .75rem;
+}
+.result th {
+  font-size: .75rem;
+}
